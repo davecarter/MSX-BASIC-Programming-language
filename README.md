@@ -54,5 +54,5 @@ External Devices: Connect modern peripherals like USB keyboards or SD card reade
 With these tools, you can dive into MSX programming, explore its rich history, and even create new games or applications today!
 
 ### Learn MSX Basic here
-- [Guide to MSX Basic programming language](./docs/index.md)
-
+- [Getting Started with MSX BASIC Programming](./docs/start.md)
+- [Index of commands](./docs/index.md)
