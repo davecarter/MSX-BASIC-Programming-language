@@ -62,12 +62,6 @@ Runs the program from the first line.
 ### PRINT
 > Displays text or values on the screen.
 ```basic
-10 PRINT "HELLO, MSX!"
-20 PRINT 2+2
-```
-### PRINT
-> Displays text or values on the screen.
-```basic
 10 REM This is a comment
 20 PRINT "LOADING"
 ```
