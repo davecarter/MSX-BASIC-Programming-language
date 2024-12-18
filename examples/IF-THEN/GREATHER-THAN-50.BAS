@@ -1,0 +1,7 @@
+' IF A CONDITION IS MET THEN COMMAND/ GOTO LINE NUMBER '
+' THE INPUT COMMAND ALLOWS GATHERING DATA FROM USER`S KEYBOARD '
+
+10 INPUT A                            
+20 IF A>50 THEN PRINT"GREATHER THAN 5 0" ELSE PRINT"LESS THAN 50"           
+30 GOTO 10                            
+40 END                                
