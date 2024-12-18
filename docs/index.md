@@ -2,8 +2,8 @@
 
 - [LOCATE](./locate.md)
 - [GOTO](./goto.md)
-- [FOR / NEXT](#for--next)
-- [INPUT](#input)
+- [FOR / NEXT](./for-next.md)
+- [INPUT](./input.md)
 - [GOSUB / RETURN](#gosub--return)
 - [READ / DATA](#read--data)
 
