@@ -1,0 +1,4 @@
+10 FOR I = 1 TO 10
+20 PRINT "INT("; I / 2; ") = "; INT(I / 2)
+30 NEXT I
+40 END
