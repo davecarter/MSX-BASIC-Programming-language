@@ -6,7 +6,7 @@
 - [INPUT](./input.md)
 - [GOSUB / RETURN](./gosub.md)
 - [READ / DATA](./read-data.md)
-
+- [INKEY$](./inkeys.md)
 ---
 
 ## Functions

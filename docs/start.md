@@ -1,6 +1,8 @@
 # Getting Started with MSX BASIC Programming  
 
-This guide introduces fundamental MSX BASIC commands and how to use the built-in MSX code editor.  
+This guide introduces fundamental MSX BASIC commands and how to use the built-in MSX code editor.
+
+BASIC stands for **Beginners All-purpose Symbolic Instruction Code**. It was designed to teach computer programming concepts easily. In MSX you'll find an improved version able to run in any other computer using this MSX standar.
 
 ---
 
