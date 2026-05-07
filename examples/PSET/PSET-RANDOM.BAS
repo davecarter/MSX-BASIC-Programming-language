@@ -1,0 +1,9 @@
+10 REM Draw 500 random colored pixels with PSET
+20 SCREEN 2: COLOR 15,1,7: CLS
+30 FOR I = 1 TO 500
+40 X = INT(RND(1) * 256)
+50 Y = INT(RND(1) * 192)
+60 C = INT(RND(1) * 15) + 1
+70 PSET (X,Y), C
+80 NEXT I
+90 GOTO 90

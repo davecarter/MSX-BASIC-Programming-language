@@ -1,0 +1,3 @@
+10 REM PEEK demonstration
+20 PRINT "PEEK(60000) ="; PEEK(60000)
+30 END

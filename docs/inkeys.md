@@ -1,34 +1,19 @@
 ### INKEY$
 
-The `INKEY$` command in MSX BASIC is used to detect and return a single character from the keyboard buffer. It is often used for real-time input handling in programs, such as games or interactive applications.
+Description
 
-#### Syntax
->`variable$` = INKEY$
+`INKEY$` reads a single character from the keyboard buffer without waiting. It returns an empty string `""` if no key is pressed and is commonly used for real-time or non-blocking input (for example, in games or interactive programs).
 
-- *variable$* is a string variable that will store the character read from the keyboard buffer.
-- If no key is pressed, `INKEY$` returns an empty string ("").
+Syntax
 
-#### Loop Until Key Press
-```basic
-PRINT "Press any key to continue..."
-DO
-  a$ = INKEY$
-LOOP UNTIL a$ <> ""
-PRINT "You pressed: "; a$
-```
-#### Real-time Input Handling
-```basic
-PRINT "Press 'Q' to quit."
-DO
-  a$ = INKEY$
-  IF a$ = "Q" OR a$ = "q" THEN EXIT DO
-LOOP
-PRINT "Program terminated."
-```
+> variable$ = INKEY$
 
-In these examples, INKEY$ is used to capture and respond to user input immediately, making it a powerful tool for interactive MSX BASIC programs. ```
+- `variable$` — String variable that receives the pressed key (single character) or `""` if no key is available.
 
-### Draw with the `@` Character on the Screen
+Example program
+
+- Example file: `../examples/INKEYS/MOVE-CHAR-SCREEN.BAS`
+
 ```basic
 10 SCREEN 0: WIDTH 40
 20 LOCATE 10, 10: PRINT "@"
@@ -45,18 +30,9 @@ In these examples, INKEY$ is used to capture and respond to user input immediate
 130 LOCATE x, y: PRINT "@"
 140 GOTO 40
 ```
-#### Initialize Screen and Position:
 
-- **Line 10**: Set the screen mode to text mode (SCREEN 0) and set the width to 40 columns.
-- **Line 20**: Place the `@` character at the initial position (10, 10).
-- **Line 30**: Initialize the variables x and y to store the current position of the @ character.
-Main Loop:
-- **Line 40**: Read a key press using INKEY$.
-- **Lines 50-80**: Update the position based on the key pressed (W, S, A, D).
-- **Lines 90-120**: Ensure the @ character stays within the screen boundaries.
-- **Line 130**: Move the @ character to the new position.
-- **Line 140**: Repeat the loop to continuously check for key presses and update the position.
+Explanation
 
-This code will allow you to move the `@` character around the screen using the specified keys. ```
+This interactive example places an `@` character on screen and lets the user move it using `W`, `A`, `S`, `D` keys. The program reads keyboard input using `INKEY$` and updates the position without blocking. It also limits the position so the character stays inside a 40x24 text area. To stop the program press the emulator's STOP/BREAK key or close the session.
 
 [<< Back](./index.md)

@@ -1,0 +1,10 @@
+10 REM Plot points then sample their color with POINT
+20 SCREEN 2: COLOR 15,1,7: CLS
+30 PSET (80,60), 5
+40 PSET (100,60), 6
+50 A = POINT(80,60)
+60 B = POINT(100,60)
+70 SCREEN 0
+80 PRINT "POINT(80,60) ="; A
+90 PRINT "POINT(100,60) ="; B
+100 END

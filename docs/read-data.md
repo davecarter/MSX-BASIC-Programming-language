@@ -1,19 +1,22 @@
 ### READ / DATA
 
-The `READ` command is used to read data values that have been defined with the `DATA` command. This allows for easy storage and retrieval of multiple values. The `DATA` command is used to define a list of values, which can then be read sequentially using the `READ` command. This is particularly useful for initializing variables or arrays with predefined values.
+Description
 
-#### Syntax
->READ variable
+`DATA` defines a sequence of literal values embedded in the program source. `READ` retrieves the next value(s) from the `DATA` list and assigns them to variables. `RESTORE` resets the `READ` pointer to the start of the `DATA` (or to a specified line number), allowing the same data to be read again.
 
->DATA value1, value2, ..., valueN
+Syntax
 
-The `variable` that will store the value read from the DATA statement.
+> READ var1[, var2, ...]
+> DATA value1[, value2, ...]
+> RESTORE [line_number]
 
-`value1`, `value2`, ..., `valueN`: 
-A comma-separated list of values to be read.
+- `var1, var2, ...` — Variables that receive values from the next `DATA` fields, read sequentially.
+- `value1, ...` — Comma-separated literal values in the `DATA` statement.
+- `RESTORE` — Resets the internal pointer used by `READ`. If `line_number` is specified, the pointer is set to the `DATA` statement at that line.
 
-#### Example
-The following MSX BASIC program demonstrates how to use the READ and DATA commands to initialize an array with predefined values and then print those values:
+Example 1 — Initialize an array from DATA
+
+- Example file: `../examples/READ-DATA/USERS-LIST.BAS`
 
 ```basic
 10 DIM A(5)
@@ -27,12 +30,32 @@ The following MSX BASIC program demonstrates how to use the READ and DATA comman
 90 END
 ```
 
-In this example:
+Explanation
 
-- Line 10: Declares an array A with 5 elements.
-- Lines 20-40: Uses a FOR loop to read values from the DATA statement into the array A.
-- Lines 50-70: Uses another FOR loop to print the values stored in the array A.
-- Line 80: Defines the values to be read by the READ command.
-- Line 90: Ends the program.
+The program declares `A(5)` and reads five values from the `DATA` line into the array. The second loop prints the values stored in the array. `DATA` fields are read sequentially by `READ`.
+
+Example 2 — Using RESTORE to reread DATA
+
+- Example file: `../examples/READ-DATA/RESTORE.BAS`
+
+```basic
+10 READ A, B, C
+20 RESTORE
+30 READ D, E, F
+40 PRINT A; B; C
+50 PRINT D; E; F
+60 END
+70 DATA 10, 20, 30
+```
+
+Explanation
+
+- Lines 10 and 30 each `READ` three values from the single `DATA` line at 70.
+- `RESTORE` (line 20) resets the `READ` pointer so the second `READ` reads the same values again into `D`, `E`, `F`.
+
+Notes
+
+- `DATA` fields are not variables and are not counted as program lines; they are literal constants embedded in the program source.
+- Use `RESTORE line_number` to target a specific `DATA` statement when multiple `DATA` lines are present.
 
 [<< Back](./index.md)

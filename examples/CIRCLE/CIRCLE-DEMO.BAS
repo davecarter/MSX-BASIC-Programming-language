@@ -1,0 +1,6 @@
+10 REM Concentric circles demo
+20 SCREEN 2: COLOR 15,1,7: CLS
+30 FOR R = 10 TO 80 STEP 10
+40 CIRCLE (127,95), R, INT(R/10) + 1
+50 NEXT R
+60 GOTO 60
