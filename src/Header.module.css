@@ -1,0 +1,27 @@
+/* Minimal styles for existing Header.tsx to avoid build errors */
+.header { background: #fff; border-bottom: 1px solid #eee }
+.headerContent { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 12px 20px }
+.logo { text-decoration: none }
+.logoText { font-weight: 700 }
+.logoSubtitle { font-size: 12px; color: #666 }
+
+/* Navigation */
+.nav { display: none }
+.navOpen { display: block }
+.navList { list-style: none; margin: 0; padding: 0; display: flex; gap: 18px; align-items: center; }
+.navItem { margin: 0 }
+.navLink { color: #1a73e8; text-decoration: none; font-weight: 500; padding: 6px 8px; border-radius: 6px }
+.navLink:hover, .navLink:focus { text-decoration: underline; background: rgba(26,115,232,0.06) }
+
+.menuButton { background: transparent; border: none }
+.hamburger span { display: block; width: 18px; height: 2px; background: #111; margin: 3px 0 }
+
+@media (min-width: 900px) {
+  .nav { display: block }
+  .menuButton { display: none }
+}
+
+@media (max-width: 900px) {
+  /* on small screens, show vertical nav when open */
+  .navOpen .navList { flex-direction: column; gap: 8px }
+}

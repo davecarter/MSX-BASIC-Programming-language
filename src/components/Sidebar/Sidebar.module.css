@@ -1,0 +1,10 @@
+.sidebar { width: 260px; position: sticky; top: 90px; height: calc(100vh - 100px); overflow: auto; border-right: 1px solid #eee; padding-right: 12px }
+.list { list-style: none; padding: 0; margin: 0; }
+.item { margin-bottom: 8px; }
+.item a { color: #333; text-decoration: none; }
+.item a:hover { text-decoration: underline; }
+.active a { font-weight: 600; }
+
+@media (max-width: 900px) {
+  .sidebar { width: 100%; position: relative; height: auto; border-right: none; padding-right: 0; }
+}

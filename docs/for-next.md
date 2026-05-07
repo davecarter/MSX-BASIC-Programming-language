@@ -1,22 +1,33 @@
 ### FOR / NEXT
-The `FOR / NEXT` loop is used to execute a block of code repeatedly for a defined number of iterations. It automatically manages a counter variable, starting from an initial value, incrementing it by a specified step (default is 1), and stopping when it exceeds the specified limit.  
+
+Description
+
+`FOR ... NEXT` is a loop structure that repeats a block of statements a fixed number of times. A counter variable advances automatically from a start value to an end value optionally using a step increment.
+
+Syntax
+
+> FOR variable = start TO end [STEP increment]
+>     statements
+> NEXT [variable]
+
+- `variable` — Loop counter variable.
+- `start` — Initial value for the counter.
+- `end` — Final value for the counter; loop stops when the counter passes this value.
+- `STEP` (optional) — Signed increment applied each iteration. Default is `1`.
+
+Example program
+
+- Example file: `../examples/FOR-NEXT/LOOP.BAS`
 
 ```basic
-FOR <Variable> = <Start> TO <End> [STEP <Increment>]
-    <Block of code>
-NEXT <Variable>
-
-```
-- Variable: A counter variable that controls the loop.
-- Start: The initial value of the counter.
-- End: The value at which the loop stops.
-- STEP (optional): Defines the increment (positive or negative) applied to the counter after each iteration. Default is 1.
-
-
-```basic
-10 FOR I = 1 TO 5
+10 FOR I = 1 TO 50
 20 PRINT I
 30 NEXT I
+40 END
 ```
+
+Explanation
+
+This example prints the numbers from 1 to 50. The loop executes the `PRINT` statement 50 times; the counter `I` is incremented automatically by 1 each iteration. To change the increment use `STEP`, e.g. `FOR I = 1 TO 50 STEP 2`.
 
 [<< Back](./index.md)

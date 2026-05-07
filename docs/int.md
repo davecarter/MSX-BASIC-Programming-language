@@ -1,22 +1,30 @@
 ### INT
 
-The `INT` function in **MSX BASIC** is used to return the integer part of a given number by truncating the decimal portion. This function is useful when you need to work with whole numbers and discard any fractional part.
+Description
 
-#### Syntax
->INT(number)
+`INT` returns the integer part of a numeric expression. It truncates toward negative infinity (i.e., `INT(-3.9)` yields `-4`). Use `INT` when you need whole-number results from real-valued expressions.
 
-- *number*: The number from which you want to extract the integer part.
+Syntax
 
-#### Basic Usage
+> INT(number)
+
+- `number` — Numeric expression whose integer part is required.
+
+Example 1 — Basic usage
+
 ```basic
 10 PRINT INT(5.7)
 20 PRINT INT(-3.9)
 30 END
 ```
 
-This example prints the integer parts of 5.7 and -3.9, which are 5 and -4 respectively.
+Explanation
 
-#### Using INT in a Loop
+The program prints `5` for `INT(5.7)` and `-4` for `INT(-3.9)` because `INT` returns the greatest integer less than or equal to the argument.
+
+Example 2 — Using INT in a loop
+
+- Example file: `../examples/INT/LOOPED-INT.BAS`
 
 ```basic
 10 FOR I = 1 TO 10
@@ -24,6 +32,9 @@ This example prints the integer parts of 5.7 and -3.9, which are 5 and -4 respec
 30 NEXT I
 40 END
 ```
-This example uses a loop to print the integer part of the numbers from 0.5 to 5.0 in increments of 0.5.
+
+Explanation
+
+This loop prints the integer part of the values `0.5, 1.0, 1.5, ...` (i.e., `I/2`) for `I = 1..10`, demonstrating how `INT` behaves on a sequence of real values.
 
 [<< Back](./index.md)

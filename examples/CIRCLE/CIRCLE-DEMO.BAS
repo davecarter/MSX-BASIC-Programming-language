@@ -1,0 +1,13 @@
+10 REM Concentric circles demo
+20 SCREEN 2: COLOR 15,1,7: CLS
+30 FOR R = 10 TO 80 STEP 10
+40   CIRCLE (127,95), R, INT(R/10) + 1
+50 NEXT R
+60 OPEN "GRP:" FOR OUTPUT AS #1
+70 PRINT #1, "Press any key to continue..."
+80 DO
+90   A$ = INKEY$
+100 LOOP UNTIL A$ <> ""
+110 CLOSE #1
+120 SCREEN 0
+130 END
