@@ -1,6 +1,13 @@
 10 REM Concentric rectangles using LINE
 20 SCREEN 2: COLOR 15,1,7: CLS
 30 FOR I = 0 TO 95 STEP 8
-40 LINE (128-I,95-I)-(128+I,95+I),1,B
+40   LINE (128-I,95-I)-(128+I,95+I),1,B
 50 NEXT
-60 GOTO 60
+60 OPEN "GRP:" FOR OUTPUT AS #1
+70 PRINT #1, "Press any key to continue..."
+80 DO
+90   A$ = INKEY$
+100 LOOP UNTIL A$ <> ""
+110 CLOSE #1
+120 SCREEN 0
+130 END
