@@ -1,0 +1,6 @@
+.toc { font-size: 14px; padding: 8px; background: #fafafa; border-radius: 6px; }
+.toc ul { list-style: none; margin: 0; padding: 0; }
+.toc li { margin: 6px 0; }
+.toc a { color: #333; text-decoration: none; }
+.level2 { padding-left: 10px; }
+.level3 { padding-left: 18px; font-size: 13px }
