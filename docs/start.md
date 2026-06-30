@@ -118,4 +118,12 @@ Experiment with mathematical operations (PRINT 2+3) and loops (e.g., using FOR a
 
 Explore the [index of commands](./index.md) in this guide to learn more MSX BASIC instructions.
 
+
+
+---
+
+## Examples and Lessons
+- Examples: [examples/README.md](../examples/README.md) — small runnable .BAS demos (graphics, sound, file I/O).
+- Lessons: [Lesson index](./lessons_index.md) — step-by-step tutorial files (Lesson 01..03).
+
 [<< Back](../README.md)
