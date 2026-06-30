@@ -1,14 +1,31 @@
 ### GOSUB / RETURN
-The GOSUB command is used to call a subroutine, which is a block of code that can be executed from multiple places in the program. The RETURN command is used to return to the line following the GOSUB call.
+GOSUB transfers execution to a subroutine (a labeled block). RETURN returns execution to the statement after the GOSUB call.
 
+#### Syntax
+>GOSUB line_number
+
+...subroutine lines...
+
+RETURN
+
+- line_number: label where the subroutine begins.
+
+#### Example
 ```basic
-10 GOSUB 100
-20 PRINT "Back to main program"
-30 END
+10 PRINT "Start"
+20 GOSUB 100
+30 PRINT "Back in main"
+40 END
 
 100 PRINT "In subroutine"
 110 RETURN
-
 ```
+
+This prints "Start", runs the subroutine at line 100, then resumes and prints "Back in main".
+
+#### Notes
+- GOSUB/RETURN is useful for reusing code (e.g., routines to draw the screen or read input).
+- Avoid deeply nested or recursive GOSUB chains; each GOSUB pushes a return address onto an internal stack with limited depth.
+- Always ensure every GOSUB path eventually reaches a RETURN to avoid running into unintended code.
 
 [<< Back](./index.md)

@@ -1,23 +1,22 @@
 ### CHR$
-The CHR$ **function** in MSX BASIC is used to convert an ASCII code (a number) into its corresponding character. This function is useful when you need to display special characters or control codes that are not easily typed from the keyboard.
+The CHR$ function converts a numeric code into the corresponding character string. It is commonly used to insert control characters or special symbols.
 
 #### Syntax
->CHR$(`number`)
+>CHR$(number)
 
-An integer value between 0 and 255 representing the ASCII code of the character you want to display.
+- number: integer (usually 0..255) representing the character code in the current character set.
 
-#### Example Program
-The following MSX BASIC program prints all available ASCII characters (from 0 to 255) on the screen:
-
+#### Example
 ```basic
 10 FOR I = 0 TO 255
-20 PRINT CHR$(I);
+20   PRINT CHR$(I);
 30 NEXT I
 40 END
 ```
+This prints characters sequentially. The trailing semicolon prevents PRINT from advancing to a new line after each character.
 
-This program uses a `FOR` loop to iterate through all ASCII codes from 0 to 255, converting each code to its corresponding character using the `CHR$` function and printing it on the screen. 
-
-The semicolon (;) at the end of the `PRINT` statement ensures that the characters are printed on the same line.
+#### Notes
+- The available characters and codes depend on the MSX character set and screen mode.
+- CHR$ is useful for control codes (e.g., line feeds) and constructing strings from numeric codes.
 
 [<< Back](./index.md)
