@@ -1,22 +1,35 @@
 ### FOR / NEXT
-The `FOR / NEXT` loop is used to execute a block of code repeatedly for a defined number of iterations. It automatically manages a counter variable, starting from an initial value, incrementing it by a specified step (default is 1), and stopping when it exceeds the specified limit.  
+The `FOR / NEXT` loop executes a block of code a fixed number of times using a counter variable.
 
-```basic
-FOR <Variable> = <Start> TO <End> [STEP <Increment>]
-    <Block of code>
-NEXT <Variable>
+#### Syntax
+>FOR variable = start TO end [STEP increment]
+>
+>    ...statements...
+>
+>NEXT [variable]
 
-```
-- Variable: A counter variable that controls the loop.
-- Start: The initial value of the counter.
-- End: The value at which the loop stops.
-- STEP (optional): Defines the increment (positive or negative) applied to the counter after each iteration. Default is 1.
+- variable: loop counter (typically a single letter).
+- start: initial numeric value.
+- end: final numeric value (loop runs while counter <= end for positive step).
+- STEP (optional): increment (can be negative). Default is 1.
 
-
+#### Examples
+Simple ascending loop:
 ```basic
 10 FOR I = 1 TO 5
 20 PRINT I
 30 NEXT I
 ```
+Descending loop with STEP:
+```basic
+10 FOR I = 10 TO 1 STEP -1
+20 PRINT I
+30 NEXT I
+```
+
+#### Notes
+- NEXT may include the variable name (NEXT I) or be written alone (NEXT).
+- Nested FOR loops are allowed — use different counter variables for clarity.
+- If STEP causes the counter to skip over the end value, the loop will terminate without executing the body for that iteration.
 
 [<< Back](./index.md)

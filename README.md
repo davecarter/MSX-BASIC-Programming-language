@@ -28,30 +28,35 @@ The MSX remains a beloved platform among retro computing enthusiasts, celebrated
 ## Getting started
 
 ### Emulator or Real Hardware
-- Online emulator: Try it online at [FileHunter/MSXdev](https://www.file-hunter.com/MSXdev/)
-- Software Emulator: Install an MSX emulator like [openMSX](https://openmsx.org/) or [blueMSX](http://bluemsx.msxblue.com/download.html). These provide a virtual MSX environment on modern computers.
-- Real MSX Computer: If you own an actual MSX machine, you’ll need compatible storage media (e.g., floppy disks, cassette tapes, or flash cartridges like the MegaFlashROM).
+- Online emulator: Try it online at [FileHunter/MSXdev](https://www.file-hunter.com/MSXdev/).
+- Software Emulators: Popular options are [openMSX](https://openmsx.org/) and [blueMSX](http://bluemsx.msxblue.com/download.html). These reproduce MSX hardware on modern systems and let you mount disk images or cartridges.
+- Real MSX Computer: If you own an actual MSX, you’ll need compatible storage media (floppy disks, cassette tapes) or a flash cartridge (e.g., MegaFlashROM) to load programs.
 
 ### Development Tools
-- MSX BASIC: Built into the MSX firmware, BASIC is perfect for beginners.
-- Cross-Development Tools: Use modern tools like SDCC or MSX-DOS compilers to write programs on your PC and run them on an MSX emulator or real hardware.
-- Text Editor: Write your code in any plain text editor (e.g., Notepad++, VS Code) for cross-development.
+- MSX BASIC: The built-in interpreter is ideal for learning and quick experimentation.
+- Cross-Development Tools: For advanced projects, use tools like SDCC or MSX-DOS toolchains to build binaries that run on MSX hardware/emulators.
+- Text Editor: Write .BAS files in any plain text editor (Notepad++, VS Code, vim).
+
+### Loading and saving programs
+- To save a program from BASIC: SAVE "A:PROGRAM.BAS"  (writes to device A: if a disk is attached).
+- To load a program: LOAD "A:PROGRAM.BAS" then RUN to execute.
+- Emulators: mount a disk image or use the emulator's file-transfer features to move .BAS files between the host and the virtual MSX.
 
 ### ROMs or Disk Images
-For testing or running programs, you'll need software, games, or blank disk images compatible with MSX.
+For testing or running programs, blank disk images and software archives are useful.
 - Resources: [[RetroROM] MSX2 Collection](https://archive.org/details/rr-msx2)
 
 ### Reference learning materials
-- Online MSX BASIC documentation or retro programming books like the "MSX BASIC Handbook".
-- Online Book: [Working with MSX Basic](https://hansotten.file-hunter.com/uploads/files/IanSinclairWorkingwithMSXBASIC.pdf) By Ian Sinclair.
-- Paperback Book: [Modern MSX BASIC Game Development: Build retro games in MSX BASIC using modern tools](https://www.amazon.com/Modern-MSX-BASIC-Game-Development/dp/1527298094/) By Raul Portales.
-- Communities such as [MSX Resource Center](https://www.msx.org/).
+- Online MSX BASIC documentation and retro programming books such as the "MSX BASIC Handbook".
+- Online Book: [Working with MSX Basic](https://hansotten.file-hunter.com/uploads/files/IanSinclairWorkingwithMSXBASIC.pdf) by Ian Sinclair.
+- Book: Modern MSX BASIC Game Development by Raul Portales.
+- Community: [MSX Resource Center](https://www.msx.org/).
 
 ### Modern Enhancements
-- Flash Carts: Devices like the [MegaFlashROM](https://msxcartridgeshop.com/VientoSur/flashrom/index.html) allow you to load software and games directly onto an MSX from an SD card.
-External Devices: Connect modern peripherals like USB keyboards or SD card readers using adapters.
+- Flash Carts: Devices like the [MegaFlashROM](https://msxcartridgeshop.com/VientoSur/flashrom/index.html) let you load software from an SD card.
+- External devices: adapters exist to use modern USB keyboards or SD card readers with MSX hardware.
 
-With these tools, you can dive into MSX programming, explore its rich history, and even create new games or applications today!
+With these basics you can start typing programs, saving them, and running them in an emulator or on real hardware. See the full tutorial: [Getting Started with MSX BASIC Programming](./docs/start.md)
 
 ### Learn MSX Basic here
 - [Getting Started with MSX BASIC Programming](./docs/start.md)

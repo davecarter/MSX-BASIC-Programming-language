@@ -1,29 +1,38 @@
 ### RND
-The `RND` function in **MSX BASIC** is used to generate random numbers. It can produce either a random number between 0 and 1, or a random integer within a specified range.
+The `RND` function generates pseudo-random numbers in MSX BASIC. Use it with different arguments to control seeding behavior.
 
 #### Syntax
->RND(`type`)
+>RND(type)
 
-- *type* : A numeric value that determines the type of random number generated.
+- type = 0 : Repeat the same sequence (fixed seed).
+- type = 1 : Generate a new random number between 0 and 1 using the current seed.
+- type = -1: Reseed the generator using the system clock (use once at program start for different sequences each run).
 
-- `0`: Generates the same sequence of random numbers each time the program is run.
-- `1`: Generates a new random number between 0 and 1.
-- `-1`: Reseeds the random number generator with a new seed based on the system clock.
-
-#### Generate a Random Number Between 0 and 1
-
+#### Examples
+Reseed the generator and get a number between 0 and 1:
 ```basic
-10 PRINT RND(1)
-20 END
+10 N = RND(-1)
+20 PRINT N
+30 END
 ```
-This example prints a random number between 0 and 1.
-
-#### Generate a Random Integer Between 1 and 10
+Random integer between 1 and 10:
 ```basic
-10 FOR I = 1 TO 10
-20 PRINT INT(RND(1) * 10) + 1
-30 NEXT I
-40 END
+10 RANDOM = INT(RND(1) * 10) + 1
+20 PRINT RANDOM
+30 END
 ```
+Generate multiple random integers:
+```basic
+10 RND -1  ' reseed (alternate syntax sometimes supported)
+20 FOR I = 1 TO 10
+30   PRINT INT(RND(1) * 10) + 1
+40 NEXT I
+50 END
+```
+
+#### Notes
+- Multiplying RND(1) by N and applying INT(...) + 1 yields integers in 1..N.
+- Some MSX BASIC variants accept `RND -1` (without parentheses) to reseed; using RND(-1) is explicit and portable.
+- For reproducible behavior (tests/examples), use RND(0) or avoid reseeding.
 
 [<< Back](./index.md)
