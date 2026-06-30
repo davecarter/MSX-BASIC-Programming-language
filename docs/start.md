@@ -2,14 +2,41 @@
 
 This guide introduces fundamental MSX BASIC commands and how to use the built-in MSX code editor.
 
-BASIC stands for **Beginners All-purpose Symbolic Instruction Code**. It was designed to teach computer programming concepts easily. In MSX you'll find an improved version able to run in any other computer using this MSX standar.
+BASIC stands for **Beginners All-purpose Symbolic Instruction Code**. It was designed to teach computer programming concepts easily. MSX BASIC is an extended, widely-compatible implementation that runs on MSX machines and on modern emulators that reproduce the MSX standard.
 
 ---
 
 ## Accessing the MSX BASIC Environment
-1. Turn on your MSX computer or emulator, and it should boot directly into the BASIC interpreter, showing a prompt like `Ok`.
+1. Turn on your MSX computer or emulator; it should boot directly into the BASIC interpreter and show a prompt like `Ok`.
 
-2. From here, you can start typing commands directly or writing programs.  
+2. From here you can type commands interactively or enter program lines. To edit longer programs on a modern PC, create plain-text files with a .BAS extension and load them into the emulator or device (see saving/loading below).
+
+3. Emulators: use an emulator such as openMSX or blueMSX to run MSX BASIC on modern systems. Emulators typically let you mount disk images, attach cartridges or paste program text. See the emulator documentation for file-transfer options and mounting images.
+
+---
+
+## Saving and loading programs (basic commands)
+- SAVE "A:PROGRAM.BAS"  
+  Saves the current program to the attached disk or virtual drive A: (replace A: with the active device if needed).
+
+- LOAD "A:PROGRAM.BAS"  
+  Loads a saved program into memory.
+
+- RUN  
+  Executes the loaded program.
+
+Notes: In emulators, after saving to a disk image you can export or mount that image from the emulator UI. Some emulators also support pasting program text directly into the MSX BASIC prompt or mapping a host folder as a virtual disk.
+
+---
+
+## Quick tips for a smooth start
+- Start small: type a short program, SAVE it, then LOAD and RUN it.
+- Use AUTO to create line numbers while you type (helps organization).
+- Use CLS and COLOR to make output readable when learning graphics or text layout.
+
+---
+
+
 
 ---
 
@@ -22,11 +49,14 @@ BASIC stands for **Beginners All-purpose Symbolic Instruction Code**. It was des
   NEW
 ```
 ### AUTO
-> Automatically generates line numbers as you type,  value.
+> Automatically generates line numbers as you type. Specify a start number and an increment (step).
 
 ```basic
   AUTO 10,10
 ```
+
+Starts line numbering at 10 and increments by 10 for each new line, helping you manage your program structure.
+
 Starts line numbering at 10 and increments by 10 for each new line, helping you manage your program structure.
 
 Stop AUTO mode with the STOP key.
